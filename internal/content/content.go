@@ -19,6 +19,57 @@ type Post struct {
 
 var posts = []Post{
 	{
+		Title:     "Apple's Multi-AI Gambit: What iOS 27 Reveals About the Platform Wars",
+		Slug:      "apples-multi-ai-gambit-what-ios-27-reveals-about-the-platform-wars",
+		Date:      "May 10, 2026",
+		Tag:       "Platforms",
+		Summary:   "Apple's new Intelligent Services Layer turns Siri into a routing system across Apple, OpenAI, and Anthropic models, setting up a direct architectural contrast with Google's Gemini-first Android strategy.",
+		SourceDoc: "https://docs.google.com/document/d/1dEJOQa4GewWrSH8N6sCUEnMkJZWwiy2kOlHw3VcjaGw/edit",
+		Sections: []Section{
+			{
+				Paragraphs: []string{
+					"Apple's first iOS 27 beta arrives just ahead of Google's May 12 Android Show and makes one strategic point unmistakable: Apple no longer intends to treat a single in-house model stack as the center of its mobile AI story.",
+					"Instead, the company is formalizing a multi-provider architecture that lets Siri and related system features route work across Apple models and selected third-party frontier systems. That is a major break from the company's historic instinct to own every important layer itself.",
+				},
+			},
+			{
+				Heading: "Apple's Integrated Model and Its Limit",
+				Paragraphs: []string{
+					"For decades Apple won by controlling the silicon, the operating system, the store, and the user experience as a single integrated stack. That formula depended on Apple being able to build or buy the best version of each critical layer.",
+					"Frontier AI changed that assumption. Apple's on-device systems remained strong for focused tasks, but open-ended reasoning, generation, and agentic behavior advanced fastest in external labs. Apple Intelligence acknowledged the gap; iOS 27 turns that workaround into core platform design.",
+				},
+			},
+			{
+				Heading: "iOS 27 Takes the Routing Logic Further",
+				Paragraphs: []string{
+					"The beta centers on a new Intelligent Services Layer, or ISL, which treats on-device Apple models, cloud-extended Apple systems, and third-party providers as candidates inside one routing framework. The system chooses the model based on task type, privacy requirements, available context, and expected performance.",
+					"At launch, the reported external providers are OpenAI and Anthropic. The important point is not just who is included first, but that Apple appears to have designed the interface for expansion, making model orchestration rather than model exclusivity the core product decision.",
+				},
+			},
+			{
+				Heading: "What Google Is Doing Differently",
+				Paragraphs: []string{
+					"That stands in sharp contrast to Android's Gemini-led approach. Google has spent the last two years binding mobile AI tightly to its own model family, from local inference up through larger cloud tasks, which gives it stronger end-to-end tuning across the OS and model boundary.",
+					"Apple is making the opposite bet. A multi-provider layer may be less coherent than a single-stack design, but it is more adaptable if leadership in the model race keeps changing. In practice, Apple is positioning the iPhone as the best distribution and orchestration surface for whichever models remain strongest over time.",
+				},
+			},
+			{
+				Heading: "The Privacy Architecture That Makes It Viable",
+				Paragraphs: []string{
+					"Apple's challenge is not only technical but political. A system that routes user requests to outside providers only works if Apple can convincingly separate personal tasks from general ones and keep sensitive workloads inside its own trusted infrastructure.",
+					"The iOS 27 design described by the beta does that through tiered classification and user controls. Personal requests stay on-device or inside Apple's private cloud path, while broader tasks such as general knowledge, creative work, or code generation can be routed outward under explicit settings.",
+				},
+			},
+			{
+				Heading: "What This Means for the Platform Wars",
+				Paragraphs: []string{
+					"The larger significance is architectural. Google is betting that controlling the model stack will produce the strongest mobile AI experience. Apple is betting that trusted orchestration across multiple providers will be more durable than any single lab's temporary lead.",
+					"For AI companies, a place inside Apple's routing layer could become one of the most valuable distribution positions in consumer technology. For users, the result is that the mobile platform war is no longer just about devices or app ecosystems. It is now directly about which operating system manages AI best.",
+				},
+			},
+		},
+	},
+	{
 		Title:     "The Sprint Is Real: Inside xAI's Grok 4 Race to the Top",
 		Slug:      "sprint-is-real-inside-xai-grok-4-race-to-the-top",
 		Date:      "May 10, 2026",

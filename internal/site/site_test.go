@@ -24,6 +24,7 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 
 	body := rec.Body.String()
 	for _, want := range []string{
+		"Apple&#39;s Multi-AI Gambit",
 		"The Sprint Is Real",
 		"The CAISI Reversal",
 		"Three AIs, Three Laws",
@@ -75,8 +76,8 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 6 {
-		t.Fatalf("len(posts) = %d, want 6", len(posts))
+	if len(posts) != 7 {
+		t.Fatalf("len(posts) = %d, want 7", len(posts))
 	}
 
 	if got := posts[0]["slug"]; got == "" {
