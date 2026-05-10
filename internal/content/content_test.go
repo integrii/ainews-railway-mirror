@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 9 {
-		t.Fatalf("Posts() returned %d posts, want 9", len(got))
+	if len(got) != 11 {
+		t.Fatalf("Posts() returned %d posts, want 11", len(got))
 	}
 
 	for _, post := range got {
@@ -25,6 +25,22 @@ func TestPostsReturnsPublishedPosts(t *testing.T) {
 }
 
 func TestFindBySlug(t *testing.T) {
+	securityPost, ok := FindBySlug("the-government-that-fears-its-own-weapon-how-mythos-became-americas-most-dangerous-ai-secret")
+	if !ok {
+		t.Fatal("FindBySlug() did not find Mythos security post")
+	}
+	if securityPost.Title != "The Government That Fears Its Own Weapon: How Mythos Became America's Most Dangerous AI Secret" {
+		t.Fatalf("FindBySlug() returned %q for Mythos security post", securityPost.Title)
+	}
+
+	memoryPost, ok := FindBySlug("samsungs-trillion-dollar-moment-and-the-memory-bottleneck-that-will-define-ais-next-year")
+	if !ok {
+		t.Fatal("FindBySlug() did not find Samsung memory post")
+	}
+	if memoryPost.Title != "Samsung's Trillion-Dollar Moment and the Memory Bottleneck That Will Define AI's Next Year" {
+		t.Fatalf("FindBySlug() returned %q for Samsung memory post", memoryPost.Title)
+	}
+
 	sciencePost, ok := FindBySlug("the-lab-without-scientists-when-ai-became-its-own-researcher")
 	if !ok {
 		t.Fatal("FindBySlug() did not find autonomous science post")

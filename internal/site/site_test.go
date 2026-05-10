@@ -24,6 +24,8 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 
 	body := rec.Body.String()
 	for _, want := range []string{
+		"The Government That Fears Its Own Weapon",
+		"Samsung&#39;s Trillion-Dollar Moment",
 		"The Lab Without Scientists",
 		"The Chip That Stays Home",
 		"Apple&#39;s Multi-AI Gambit",
@@ -78,12 +80,12 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 9 {
-		t.Fatalf("len(posts) = %d, want 9", len(posts))
+	if len(posts) != 11 {
+		t.Fatalf("len(posts) = %d, want 11", len(posts))
 	}
 
-	if got := posts[0]["slug"]; got == "" {
-		t.Fatalf("first post slug was empty")
+	if got := posts[0]["slug"]; got != "the-government-that-fears-its-own-weapon-how-mythos-became-americas-most-dangerous-ai-secret" {
+		t.Fatalf("first post slug = %q, want newest Mythos post", got)
 	}
 }
 
